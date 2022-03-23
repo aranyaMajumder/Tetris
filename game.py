@@ -13,20 +13,21 @@ print(s.p)
 print(b)
 i=0
 while True:
-    if keyboard.read_key()=='a':
+    if keyboard.read_key()=='enter' and i==0:
+        break
+    elif keyboard.read_key()=='a':
         b,i = s.select("left", i)
         print(s.p)
         
         print(b)
         
-    if keyboard.read_key()=="d":
+    elif keyboard.read_key()=="d":
         b,i = s.select("right", i)
         print(s.p)
         
         
         print(b)
-    if keyboard.is_pressed('enter') and i==0:
-        break
+
 board = [] #20 x 20
 # board[y][x] = "#" to set a character '#' in x,y
 
